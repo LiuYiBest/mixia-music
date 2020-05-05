@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>官方免费下载米虾音乐</title>
+    <link rel="shortcut icon" href="../images/favicon.ico"/>
+    <link rel="stylesheet" href="../css/base.css" type="text/css">
+    <link rel="stylesheet" href="../css/denglu.css">
+    <style type="text/css">
+        *{margin: 0;padding: 0;}
+        body, html{font: 12px "微软雅黑";background: rgba(255, 255, 255, 0.35);overflow-x: hidden}
+        a, button, input,img{outline: none;border: 0;text-decoration: none}
+        a:hover{color: #be60be}
+        ul{list-style: none;}
+        .wrapper{min-width:1000px;width: 100%;height: 100%;overflow: hidden;}
+        .Browse-position{width: 100%;height: 40px;background: #e8e8e8;}
+        .Browse-position .Browse-msg{width: 1000px;height: 40px;line-height: 40px;margin: 0 auto;color: #999;font-size: 14px;}
+        .Browse-position .Browse-msg a{color: #999;}
+        .product{width: 1000px;height: 355px;margin: 0 auto;background: #f8f8f8;box-shadow: -440px 0 0 #f8f8f8, 440px 0 0 #f8f8f8;}
+        .product .download{float: left;width: 300px;height: 280px;margin-left: 30px;margin-top: 40px;background: #fff;cursor: pointer;}
+        .download:hover{box-shadow: 0 0 10px 8px #ddd;}
+        .product .download .dl-logo{width: 64px;height: 64px;margin: 50px auto 20px auto;}
+        .product .download p,.product .download a.btn{width: 100%;height: 24px;line-height: 24px;text-align: center;font-size: 18px;margin-bottom: 10px;}
+        .time{font-size: 14px;color: #a2a2a2;}
+        .product .download a.btn{display: block;width: 180px;height: 36px;line-height: 36px;margin: 0 auto;color: #fff;font-weight: 200;background: #be60be;}
+        .download a.btn span{display: inline-block;width: 24px;height: 16px;background: url("../images/download-Icon.png")no-repeat;}
+        .tuijian_product{width: 1000px;height: 700px;margin: 0 auto ;background: #e3e3e3;box-shadow: -440px 0 0 #e3e3e3, 440px 0 0 #e3e3e3;}
+        .tuijian_product>p{font-size: 30px;color: #be60be;font-weight: 400;margin: 0 5px 10px auto;padding-top: 5px;}
+        .tuijian_product ul li{width: 300px;height: 116px;background: #fff;float: left;margin: 10px auto 20px 30px;}
+        .tuijian_product ul li:hover{box-shadow: 0 0 10px 8px rgba(174, 174, 174, 0.49);cursor: pointer;}
+        .tuijian_product li img{width: 50px;height: 50px;margin-top:33px;margin-left: 33px;border-radius: 10px;}
+        .tuijian_product li img + p{position: relative;display: inline-block;top: -50px;left: 33px;width: 175px;height: 24px;line-height: 24px;font: 800 18px "幼圆";}
+        .tuijian_product .time{position: relative;width: 175px;height: 24px;top: -47px;left: 117px;}
+        .tuijian_product .time:before{content: "更新日期： ";}
+        .tuijian_product ul li > a.btn{position: relative;display: block;width: 90px;height: 30px;top: -45px;left: 117px;text-align: center;line-height: 30px;background: #be60be;color: #fff;}
+        .tuijian_product .btn:hover,.product .btn:hover{background: #904990 !important;}
+        p:not([class]):hover{color: #be60be;}
+        .footer{width: 100%;height: 400px;overflow: hidden;}
+    </style>
+</head>
+<body onselectstart="return false">
+    <div class="scroll"></div>
+    <div class="wrapper">
+        <!--导航栏-->
+        <div class="header">
+            <h1 class="logo">
+                <a href="index.html"><img src="../images/logo.png"/></a>
+            </h1>
+            <div class="header_search">
+                <input type="text" class="search" placeholder="搜索"/>
+                <div class="h-search-btn"><i class="h-search-icon"></i></div>
+            </div>
+            <div class="h_nav">
+                <ul>
+                    <li><a href="#" style="color: #a855a8">客服中心</a></li>
+                    <li><a href="#" style="color: #a855a8">产品中心</a></li>
+                    <li class="btn"><a href="#" class="nav_btn">登录</a><a href="注册.html" class="nav_btn">注册</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="nav">
+            <ul class="nav_left animated fadeInLeftBig">
+                <li style="background: #2c323b"><a href="index.html">首页</a></li>
+                <li><a href="javascript:">榜单</a></li>
+                <li style="width: 140px;background: #9a4d9a;"><a href="下载客户端.html">下载客户端</a></li>
+                <li class="more" style="width: 113px">
+                    <a href="javascript:">更多<span></span></a>
+                    <ul class="subnav" style="display:none;">
+                        <li><a href="javascript:">电台</a></li>
+                        <li><a href="javascript:">MV</a></li>
+                        <li><a href="javascript:">歌单</a></li>
+                        <li><a href="javascript:">歌手</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav_right animated fadeInRightBig">
+                <li style="margin-left: 50px"><a href="javascript:">音乐直播</a></li>
+                <li><a href="javascript:">米虾LIVE</a></li>
+                <li><a href="javascript:">音乐人</a></li>
+                <li><a href="javascript:">游戏</a></li>
+                <li><a href="米虾商城.html">商城</a></li>
+            </ul>
+        </div>
+        <div class="Browse-position">
+            <p class="Browse-msg">我的位置：<a href="index.html">首页</a>＞<a href="下载客户端.html">客户端下载</a></p>
+        </div>
+        <div class="product">
+            <div class="pc download">
+                <div class="dl-logo"><img src="../images/window.png"/></div>
+                <p>PC版下载</p>
+                <p class="time">更新日期：2017.4.3</p>
+                <a class="btn" href="../download/mixia_pc.exe"><span></span>立即下载</a>
+            </div>
+            <div class="android download">
+                <div class="dl-logo"><img src="../images/android.png"/></div>
+                <p>android版下载</p>
+                <p class="time">更新日期：2017.4.3</p>
+                <a class="btn" href="../download/mixia_android.exe"><span></span>立即下载</a>
+            </div>
+            <div class="iphone download">
+                <div class="dl-logo"><img src="../images/ip.png"/></div>
+                <p>iphone版下载</p>
+                <p class="time">更新日期：2017.4.3</p>
+                <a class="btn" href="../download/mixia_iphone.exe"><span></span>立即下载</a>
+            </div>
+        </div>
+        <div class="tuijian_product">
+            <p>推荐</p>
+            <ul>
+                <li>
+                    <img src="../images/pro-1.jpg">
+                    <p>DJ音乐盒</p>
+                    <p class="time">2017.4.3</p>
+                    <a class="btn" href="../download/DJ音乐盒.exe">下载</a>
+                </li>
+                <li>
+                    <img src="../images/pro-2.jpg">
+                    <p>酷我音乐盒</p>
+                    <p class="time">2017.4.3</p>
+                    <a class="btn" href="../download/酷我音乐盒.exe">下载</a>
+                </li>
+                <li>
+                    <img src="../images/pro-3.jpg">
+                    <p>百度音乐</p>
+                    <p class="time">2017.4.3</p>
+                    <a class="btn" href="../download/百度音乐.exe">下载</a>
+                </li>
+                <li>
+                    <img src="../images/pro-4.jpg">
+                    <p>多米音乐</p>
+                    <p class="time">2017.4.3</p>
+                    <a class="btn" href="../download/多米音乐.exe">下载</a>
+                </li>
+                <li>
+                    <img src="../images/pro-5.jpg">
+                    <p>QQ音乐</p>
+                    <p class="time">2017.4.3</p>
+                    <a class="btn" href="../download/QQ音乐.exe">下载</a>
+                </li>
+                <li>
+                    <img src="../images/pro-6.jpg">
+                    <p>91助手</p>
+                    <p class="time">2017.4.3</p>
+                    <a class="btn" href="../download/91助手.exe">下载</a>
+                </li>
+                <li>
+                    <img src="../images/pro-7.png">
+                    <p>哄你睡</p>
+                    <p class="time">2017.4.3</p>
+                    <a class="btn" href="../download/哄你睡.exe">下载</a>
+                </li>
+                <li>
+                    <img src="../images/pro-8.png">
+                    <p>酷狗音乐</p>
+                    <p class="time">2017.4.3</p>
+                    <a class="btn" href="../download/酷狗音乐.exe">下载</a>
+                </li>
+                <li>
+                    <img src="../images/pro-9.png">
+                    <p>米拉桌面</p>
+                    <p class="time">2017.4.3</p>
+                    <a class="btn" href="../download/米拉桌面.exe">下载</a>
+                </li>
+                <li>
+                    <img src="../images/pro-10.png">
+                    <p>5Sing</p>
+                    <p class="time">2017.4.3</p>
+                    <a class="btn" href="../download/5Sing.exe">下载</a>
+                </li>
+                <li>
+                    <img src="../images/pro-11.jpg">
+                    <p>铃声制作工具</p>
+                    <p class="time">2017.4.3</p>
+                    <a class="btn" href="../download/铃声制作工具.exe">下载</a>
+                </li>
+                <li>
+                    <img src="../images/pro-12.jpg">
+                    <p>foobar2000</p>
+                    <p class="time">2017.4.3</p>
+                    <a class="btn" href="../download/foobar2000.exe">下载</a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer">
+            <iframe src="foot.html" frameborder="0" scrolling="no" style="width: 100%;height: 400px"></iframe>
+        </div>
+    </div>
+    <script src="../js/jquery-2.0.3.min.js"></script>
+    <script src="../js/scroll.js"></script>
+    <script src="../js/Drag.js"></script>
+    <script>
+        $('.more').hover(function () {
+            $(this).children('ul').show();
+        }, function () {
+            $(this).children('ul').hide();
+        });
+
+        $('.nav_right li').each(function (i) {
+            var pos = -119 - i * 36;
+            $(this).children('a').prepend('<span class="span"></span>');
+            $('.span').eq(i).css({'backgroundPosition': '0px' + ' ' + pos + 'px'});
+        });
+    </script>
+</body>
+</html>

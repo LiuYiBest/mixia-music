@@ -1,0 +1,307 @@
+﻿<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <title>用户注册-米虾音乐</title>
+    <link rel="stylesheet" href="../css/denglu.css">
+    <link rel="shortcut icon" href="../images/favicon.ico"/>
+    <link rel="stylesheet" href="../css/base.css">
+    <style type="text/css">
+        *{padding: 0;margin: 0;}
+        body,html{font: 12px "微软雅黑";width: 100%;height: 100%}
+        ul{list-style-type: none;}
+        /*设置所有li浮动*/
+        ul li{float: left;}
+        /*设置导航栏下的所有a标签*/
+        ul li a{text-decoration: none;color: #fff;display: block;text-align: center;height: 60px;line-height: 60px;width: 90px;font-size: 14px;margin-right: 20px;}
+        .wrapper{width: 100%;height: 1144px}
+        .head_bg{display: inline-block;width: 260px;height: 40px;background: url("../images/header_bg.jpg") no-repeat;}
+        /*设置导航栏上面那部分*/
+        .zc_head_top{width: 960px;height: 40px;margin: 0 auto;position: relative;}
+        .zc_head_top_right a{text-decoration: none;font-size: 14px;line-height: 14px;color: #0c85cc;margin-left: 10px;}
+        .zc_head_top_right a:hover{text-decoration: underline;}
+        .zc_head_top_right{width: 110px;height: 40px;position: absolute;right: 5px;top: 50%;margin-top: -7px;}
+        .shoppind_cat{width: 20px;height: 14px;background: url("../images/header_bg1.png") no-repeat 0 -310px;overflow: hidden;position: absolute;}
+        /*设置导航栏*/
+        .zc_head_cot{display: block;width: 960px;height: 60px;background: #442244;margin: 0 auto;box-shadow: -440px 0 0 #442244, 440px 0 0 #442244;}
+        .zc_head_cot > ul > li > a{font-size: 16px;}
+        .zc_head_cot > .left{display: block;width: 620px;height: 60px;float: left;}
+        .zc_head_cot > .right{display: block;width: 230px;height: 60px;float: right;}
+        .zc_head_cot > .left > li:first-of-type a{position: relative;padding-left: 40px;font: italic bold 30px "华文琥珀";line-height: 60px;width: 180px;}
+        #theme img{position: absolute;left: 0;top: 5px;}
+        .zc_content{width: 960px;height: auto;margin: 40px auto 50px auto;}
+        #content_head{color: #be60be;display: block;width: 958px;border-top: 6px solid #442244;border-left: 1px solid #442244;border-right: 1px solid #442244;text-align: center;font-size: 27px;height: 27px;line-height: 27px;padding: 28px 0 23px 0;text-decoration: none;background: #fff;position: relative;z-index: 1;box-shadow: -2px -2px 3px #ddd, 2px -2px 3px #ddd;}
+        .zc_content_body{font-size: 14px;line-height: 14px;color: #474747;width: 858px;border: 1px solid #442244;border-radius: 5px;padding: 50px;position: relative;top: -10px;z-index: 0;box-shadow: -2px 2px 3px #ddd, 2px 2px 3px #ddd;}
+        form a{color: #54ade7;}
+        /*设置table宽高和位置*/
+        #resiger{width: 400px;height: auto;margin: 0 auto;}
+        /*设置输入框样式*/
+        #user, #ps, #ps-con{width: 265px;height: 22px;border: 1px solid #ccc;padding: 7px;background: #f3f3f3;transition: all 0.25s;}
+        #user:hover, #ps:hover, #ps-con:hover{background: rgb(226, 244, 255);}
+        #user:focus, #ps:focus, #ps-con:focus{background: #fff;border-color: #442244;}
+        tr{height: 56px;}
+        tr > td:first-of-type{line-height: 50px;text-align: right;}
+        tr > td:first-child{width: 300px;}
+        i.icon{width: 12px;height: 12px;display: none;}
+        .common{padding-left: 10px;color: #393939;}
+        .ps_strength{height: 20px;}
+        #ps_strength_td{font-size: 12px;line-height: 12px;height: 12px;}
+        #ps_strength_td div{display: inline-block;width: 167px;line-height: 12px;height: 12px;background: #e0e0e0;overflow: hidden;position: relative;bottom: -2px;}
+        #ps_strength_td_span1{display: block;width: 167px;height: 12px;line-height: 12px;background: rgba(190, 96, 190, 0.62);position: absolute;z-index: 1;right: 167px;}
+        #ps_strength_td_span2{display: block;width: 55px;height: 12px;line-height: 12px;border-left: 1px solid #fff;border-right: 1px solid #fff;position: absolute;left: 55px;z-index: 2;}
+        #send{display: block;padding: 0 25px;width: 100px;height: 40px;font-size: 21px;color: #fff;border: 1px solid #ff80ff;background: #9a4d9a;border-radius: 2px;-moz-border-radius: 2px;-webkit-border-radius: 2px;}
+        #send:hover{background: rgba(94, 47, 94, 0.89);}
+        .footer{width: 100%;height: 400px;background: #525552;overflow: hidden;}
+        /*添加class*/
+        .error, .righta{background: #ccc;background: url("../images/error.gif") no-repeat;padding-left: 25px;padding-right: 5px;}
+        .righta{background: url("../images/righta.gif") no-repeat}
+    </style>
+</head>
+<body onselectstart="return false">
+<div class="scroll" style="display:none;"></div>
+<div class="wrapper">
+    <div class="zc_head_top">
+        <i class="head_bg"></i>
+        <div class="zc_head_top_right">
+            <a href="注册.html" title="新用户注册" target="_blank">注册</a>
+            <a href="javascript:" title="登陆" class="show">登陆</a>
+            |
+            <a href="javascript:" title="购物车中还没有商品，赶紧选购吧!">
+                <span class="shoppind_cat"></span>
+            </a>
+        </div>
+    </div>
+    <div class="zc_head_cot">
+        <ul class="left ">
+            <li>
+                <a href="index.html" id="theme">
+                    <img src="../images/logo.png" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="米虾商城.html" title="米虾商城">
+                    米虾商城
+                </a>
+            </li>
+            <li>
+                <a href="下载客户端.html" title="下载客户端">
+                    下载客户端
+                </a>
+            </li>
+            <li>
+                <a href="javascript:" title="米虾音乐人">
+                    米虾音乐人
+                </a>
+            </li>
+        </ul>
+        <ul class="right ">
+            <li>
+                <a href="下载客户端.html" title="虾米音乐盒官方免费下载">
+                    产品中心
+                </a>
+            </li>
+            <li>
+                <a href="javascript:" title="客服中心">
+                    客服中心
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="zc_content">
+        <a href="" id="content_head">
+            <i></i>
+            用户注册
+        </a>
+        <div class="zc_content_body">
+            <form action="#" name="form" method="post">
+                <table id="resiger" style="width: 858px">
+                    <tbody>
+                    <tr>
+                        <td>
+                            <label for="user">
+                                *用户名：
+                            </label>
+                        </td>
+                        <td>
+                            <input type="text" name="user" id="user"/>
+                            <i class="icon"></i>
+                            <span class="check-1 common" style="display: none">请输入用户名</span>
+                            <span class="check_txt-1 check_txt"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="ps">
+                                *密码：
+                            </label>
+                        </td>
+                        <td>
+                            <input type="password" name="ps" id="ps" maxlength="20"/>
+                            <i class="icon"></i>
+                            <span class="check-2 common" style="display: none">密码需由6-20位数字、字母、符号组成</span>
+                            <span class="check_txt-2 check_txt"></span>
+                        </td>
+                    </tr>
+                    <tr class="ps_strength">
+                        <td></td>
+                        <td id="ps_strength_td">
+                            密码强度：弱
+                            <div>
+                                <span id="ps_strength_td_span1"></span>
+                                <span id="ps_strength_td_span2"></span>
+                            </div>
+                            强
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="ps-con">
+                                *确认密码：
+                            </label>
+                        </td>
+                        <td>
+                            <input type="password" name="ps-con" id="ps-con"/>
+                            <i class="icon"></i>
+                            <span class="check-3 common" style="display: none"></span>
+                            <span class="check_txt-3 check_txt"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            *性别：
+                        </td>
+                        <td>
+                            <input type="radio" name="sex" value="男" checked="checked" id="male">
+                            <label for="male">
+                                男
+                            </label>
+                            <input type="radio" name="sex" value="女" id="gender"/>
+                            <label for="gender">
+                                女
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <label>
+                                <input type="checkbox" checked/>
+                                我已认真阅读并同意
+                            </label>
+                            <a href="javascript:">用户协议</a>
+                            、
+                            <a href="javascript:">隐私政策</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="submit" value="注册" id="send">
+                        </td>
+                    </tr>
+                    <tbody>
+                </table>
+            </form>
+        </div>
+    </div>
+    <div class="footer">
+        <iframe src="foot.html" frameborder="0" style="width: 100%;height: 400px" scrolling="no">
+        </iframe>
+    </div>
+</div>
+</body>
+<script src="../js/jquery-2.0.3.min.js"></script>
+<script src="../js/scroll.js"></script>
+<script src="../js/Drag.js"></script>
+<script>
+    $('form input').bind({
+        focus: function () {
+            if ($(this).is("#user")) {
+                $('.check-1').show();
+                $('.check_txt-1').hide();
+            }
+            if ($(this).is("#ps")) {
+                var _this = this;
+                $('.check-2').show();
+                $('.check_txt-2').hide();
+                $(_this).keyup(function () {
+                    if (RegExp(/^\d+$/).test(_this.value) || RegExp(/^[a-zA-Z]+$/).test(_this.value) || RegExp(/^[@#$%^&*()!~+-/{}|:"<>?,';]+$/).test(_this.value)) {
+                        $('#ps_strength_td_span1').css({'right': '112px'})
+                    } else if (RegExp(/^(?!\d+$)(?![a-zA-Z]+$)[a-zA-Z\d]+$/).test(_this.value) ||
+                        RegExp(/^(?![a-zA-Z]+$)(?![@#$%^&]+$)[a-zA-Z@#$%^&]+$/).test(_this.value) ||
+                        RegExp(/^(?!\d+)(?![@#$%^&]+$)[\d@#$%^&]+$/).test(_this.value)) {
+                        $('#ps_strength_td_span1').css({'right': '56px'})
+                    } else if (RegExp(/^(?!\d+$)(?![a-zA-Z]+$)(?![@#$%^&*()!~+-/{}|:"<>?,';]+$)[\da-zA-Z@#$%^&]+$/).test(_this.value)) {
+                        $('#ps_strength_td_span1').css({'right': '0px'})
+                    } else {
+                        $('#ps_strength_td_span1').css({'right': '167px'})
+                    }
+                });
+            }
+        },
+        blur: function () {
+            $('.common').hide();
+            if(this.value!=null){
+                if ($(this).is("#user")) {
+                    if (this.value.length < 6) {
+                        $('.check_txt-1').addClass('error').removeClass('righta').html("用户名不能小于6位").show();
+                    } else {
+                        $('.check_txt-1').addClass('righta').removeClass('error').html("用户名输入正确").show();
+                    }
+                }
+                if ($(this).is("#ps")) {
+                    if (this.value.length >= 6 && this.value.length <= 20) {
+                        $('.check_txt-2').addClass('righta').removeClass('error').html('').show();
+                    } else {
+                        $('.check_txt-2').addClass('error').removeClass('righta').html("密码不可用").show();
+                    }
+                }
+                if ($(this).is("#ps-con")) {
+                    if($(this).val()==$("#ps").val()&&this.value.length>=6&&this.value.length<=20){
+                        $('.check_txt-3').addClass('righta').removeClass('error').html('').show();
+                    }else{
+                        $('.check_txt-3').addClass('error').removeClass('righta').html('两次密码不一致').show();
+                    }
+                }
+            }
+        }
+    });
+    var flag = false;
+    var user=null;
+    var password=null;
+    $('#send').click(function () {
+        $("form :input").trigger("blur");
+        if ($(".error").length==0){
+            alert("注册成功");
+            user = $("#user").val();
+            password =$("#ps").val();
+            flag = true;
+        }else {
+            flag = false;
+        }
+        return false;
+    });
+    $('input[type=checkbox]').click(function () {
+        if (!this.checked) {
+            $('input[type=submit]').css({'background': '#bbb', 'border': '0'});
+        } else {
+            $('input[type=submit]').css({'background': '#9a4d9a', 'border': '1px solid #ff80ff'})
+        }
+    });
+    $(".button").click(function () {
+        if($(".error").length==0){
+            if(flag&&user==$('#name').val()&&$('#pass').val()==password){
+                alert("登录成功");
+                return true;
+            }else {
+                alert("用户名或密码输入错误");
+                return false;
+            }
+        }else {
+            alert("用户名不存在");
+            return false;
+        }
+    })
+</script>
+</html>

@@ -1,0 +1,77 @@
+﻿*{margin: 0;padding: 0;}
+body, html{font: 12px "微软雅黑";background: rgba(255, 255, 255, 0.35);overflow-x: hidden}
+a, button, input,img{outline: none;border: 0;text-decoration: none}
+a:hover{color: #be60be}
+ul{list-style: none;}
+.wrapper{min-width:1000px;width: 100%;height: 100%;overflow: hidden;}
+.banner_warp{height: 480px;overflow: hidden;}
+.banner{position: relative;height: 445px;overflow: hidden;}
+.banner ul{height: 100%;overflow: hidden;}
+.banner ul li{position: relative;top: 0;left: 0;float: left;height: 445px;}
+.banner ul li img{height: 445px;cursor: pointer;}
+.menu{position: relative;height: 10px;top: -90px;text-align: center;}
+.menu a{display: inline-block;width: 10px;height: 10px;margin-left: 20px;cursor: pointer;background: url("../images/nav.png") 0 -22px;}
+.menu a:first-child{margin-left:0;}
+.download_warp{position: relative;top: -70px;z-index: 10;width: 100%;height: 60px;background: rgba(0, 0, 0, .3);}
+.download{margin: 0 auto;width: 745px;}
+.download a{display: inline-block;width: 155px;height: 25px;margin-top: 20px;margin-left: 60px;padding-left: 30px;color: #fff;line-height: 25px;}
+.content{width: 1000px;height:820px;min-width: 1000px;margin: 0 auto;}
+.jx_gedan{width: 650px;height: 390px;float: left}
+.jx_gedan > div{display: inline-block;}
+.jx_gedan p,.jx_gedan span{cursor: pointer;}
+.itemTitle{width: 650px;height: 30px;line-height:30px;margin-bottom: 34px;cursor: default;}
+.itemTitle h1{display: inline-block;width: 120px;color: #555;font-weight: 400;}
+.itemTitle h1 b{font-weight:400;color: #be60be;}
+.itemTitle a{float: right}
+.jx_big{position: relative;width: 325px;height: 325px;}
+.jx_big .mask{top: 0;left: 0;width: 325px;height: 325px;}
+.jx_big .message{position: absolute;bottom: 0;width: 100%;height: 50px;background: rgba(0,0,0,.3);}
+.count{position: relative;width: 160px;height: 30px;line-height: 30px;padding-right: 10px;font-size: 16px;color: #fff;text-align: right;background: url("../images/cpt.png")no-repeat right center;}
+.count:first-child{position: absolute;}
+.message p{height: 25px;line-height: 25px;padding-left: 10px;font-size: 16px;color: #cfcfcf;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;}
+.message p:first-child{color: #fff;}
+.jx_small .message{position: absolute;width: 160px;height: 50px;background: rgba(0,0,0,.3);}
+.jx_small .message p{width: 100px;}
+.message .play{position: absolute;right: 7px;bottom: 7px;display: none;width: 36px;height: 36px;background: url("../images/nav.png") 0 -401px;}
+.play:hover{background: url("../images/nav.png") 0 -360px;}
+.jx_small >div:not(.mask){display: inline-block;width: 160px;height: 160px;}
+.mask{position: absolute;display: none;background: rgba(0,0,0,.3);cursor: pointer;}
+.jx_small .mask{width: 160px;height: 160px;}
+.jx_small{position: relative;top: -328px;left: 330px;width: 335px;height: 335px}
+.rm_bangdan{float: right;width: 320px;height: 385px;}
+.rm_bangdan .mask{width: 98px;height: 98px;}
+.list_item{width: 100%;height: 98px;margin-bottom: 15px;background-color: #f6f6f6;}
+.list_item img{width: 98px;height: 98px;}
+.list_item div{float: right;width: 210px;height: 98px;padding-top: 10px;cursor: pointer;}
+.list_item div p{height: 24px;line-height: 24px;margin-top: 5px;}
+.new{float:left;width: 650px;height: 410px;padding-top: 30px;overflow: hidden;border-bottom: 2px solid #ddd;}
+.new .itemTitle span{display: inline-block;font-size:14px;margin-left: 5px;cursor: pointer;}
+.submenu{display: none;width: 100%;height: 240px;border-top: 2px solid #ddd;}
+.submenu ul{margin-top: 13px;}
+.submenu ul li{height: 35px;padding-left: 10px;line-height: 35px;background: rgba(255, 255, 255, 0.87);margin-bottom: 5px;cursor: pointer;color: #333;}
+.submenu ul li:hover{background: #ddd;color: #dc6fdc;}
+.submenu ul li span{float: right;padding-right: 8px;}
+.guess-love{float: right;width: 320px;height: 395px;margin-top: 30px;}
+.guess-love .mask{width: 150px;height: 150px;}
+.guess-love .love-txt{position: relative;display: inline-block;width: 150px;height: 150px;margin: 4px;cursor: pointer;}
+.guess-love .love-txt img{width: 150px;height: 150px;}
+.guess-love .love-txt p{position: absolute;height: 40px;width: 150px;top: 110px;background: rgba(0,0,0,.5);color: #fff;font-size:16px;line-height: 40px;}
+.guess-love .love-txt p span{display: inline-block;width: 110px;height: 40px;padding-left: 10px;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;}
+.guess-love .cover{width: 150px;height: 150px;position: relative;background: rgba(0,0,0,.3);top: -154px;display: none;}
+.guess-love .love-txt:hover .cover{display: block;}
+.guess-love .love-txt .cover span.play{position: absolute;display: inline-block;width: 36px;height: 36px;top: 0;left: 0;right: 0;bottom: 0;margin: auto;background: url("../images/nav.png")no-repeat 0 -401px;}
+.guess-love .love-btn{width: 320px;height: 30px;text-align: center;line-height: 30px;background: rgba(209, 209, 209, 0.82);}
+.guess-love .love-btn:hover{background: #52dcb5;}
+.guess-love .love-btn span{color: #2a2a2a;cursor: pointer;}
+.guess-love .love-btn span:hover{color: #ffffff;}
+.footer{width: 100%;height: 400px;margin-top: 100px;background: #525552;overflow: hidden;}
+.active{background-position: 0 -37px !important;}
+.love-active{animation: fadeIn 1s linear;}
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}

@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+	<title>页脚</title>
+	<style type="text/css">
+		*{margin:0;padding:0;}
+		body{font:12px "微软雅黑";color:#fff;}
+		/*清楚浮动*/
+        .clearfix{*zoom:1;}
+		.clearfix:after{content:'';display:block;height:0;overflow:hidden;clear:both;}
+		/*设置公共尾部样式*/
+        #public_footer{width:100%;height:auto;background:rgb(44,50,59);}
+		#public_footer_cot{width:1000px;height:450px;margin:0 auto;background:rgb(44,50,59);}
+		#public_footer_cot .email{width:1000px;padding-top:60px;padding-bottom:40px;}
+		.email h2{width:220px;text-align:center;background: #be60be;cursor:pointer;height:30px;line-height:30px;margin:0 auto;font-size:24px;}
+		/*设置链接样式*/
+		ul li{list-style-type: none;float:left;}
+		ul li a{display:block;text-decoration:none;}
+		.links_head{width:490px;margin:0 auto;}
+		.links_head li{padding:0 20px 0 20px;border-right:1px solid #b1b3b9;}
+		.links_head li:last-child{border-right:none;}
+		.links_head a{color:#b1b3b9;height:13px;line-height:13px;font-size:13px;}
+		.links_head a:hover{color:#009af3;}
+		/*设置政权样式*/
+        .copyright p{text-align:center;margin-top:20px;color:#b1b3b9;font-size:14px;}
+		.copyright p a{color:#999;text-decoration:none;}
+		.copyright p:last-child a{display:inline-block;width:20px;height:20px;background:url("../images/foot/logo_copyright.png") no-repeat;margin-left:3px;}
+		/*设置底部图片样式*/
+        .links_foot{width:280px;margin-top:30px;margin-left:auto;margin-right:auto;}
+		.links_foot a{height:48px;}
+		.links_foot span{display:inline-block;width:50px;height:48px;background:red;}
+		.links_foot li{margin:0 10px;}
+	</style>
+    <script src="../js/jquery-2.0.3.min.js"></script>
+    <script>
+        $(function () {
+            $('.links_foot span').each(function (i) {
+                $(this).css({'background':'url(../images/foot/logo_down'+(i+1)+'.png'});
+                $(this).hover(function () {
+                    $(this).css({'background':'url(../images/foot/logo_down'+(i+1)+'-hover.png'});
+                },function () {
+                    $(this).css({'background':'url(../images/foot/logo_down'+(i+1)+'.png'});
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+<div id="public_footer">
+    <div id="public_footer_cot">
+        <div class="email">
+            <h2>hello@mixia.com</h2>
+        </div>
+        <ul class="links_head clearfix">
+            <li>
+                <a href="#">
+                    关于米虾
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    版权指引
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    隐私政策
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    客服中心
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    用户体验计划
+                </a>
+            </li>
+        </ul>
+        <div class="copyright">
+            <p>我们致力于推动网络正版音乐发展，相关版权合作请联系hello@mixia.com</p>
+            <p>广播电视节目制作经营许可证（粤）字第11270号&nbsp;&nbsp;&nbsp;营业性演出许可证穗天演440106026</p>
+            <p>Copyright&nbsp;&copy;&nbsp;2017-2030 MiXia-Inc.All&nbsp;Rights&nbsp;Reserved<a href="#"></a></p>
+        </div>
+        <ul class="links_foot clearfix">
+            <li>
+                <a href="#">
+                    <span></span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span></span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span></span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span></span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
